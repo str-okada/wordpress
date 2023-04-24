@@ -18,8 +18,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1><?php bloginfo('name')?></h1>
-            <span class="subheading"><?php bloginfo('description')?></span>
+            <h1>Category</h1>
+            <span class="subheading"><?php wp_title('');?></span>
           </div>
         </div>
       </div>
@@ -51,24 +51,20 @@
           <hr>
           <!-- Pager -->
           <div class="clearfix">
-
-            <?php
+          <?php
             $link = get_previous_posts_link('&larr; Newer Posts');
             if ($link) {
               $link = str_replace('<a', '<a class="btn btn-primary float-left"', $link);
               echo $link;
             }
             ?>
-            <!-- <a class="btn btn-primary float-left" href="#">&larr; Newer Posts</a> -->
-
+           
             <?php
             $link = get_next_posts_link('Older Posts &rarr;');
             if ($link) {
               $link = str_replace('<a', '<a class="btn btn-primary float-right"', $link);
               echo $link;
-            }
-            ?>
-            <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
+            }?>
           </div>
         <?php else : ?>
           <p>Cannot find the article</p>
